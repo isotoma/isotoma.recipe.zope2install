@@ -31,9 +31,8 @@ setup(
       "Framework :: Zope2",
       "Programming Language :: Python",
       ],
-    packages=find_packages('src'),
+    packages=find_packages(),
     include_package_data=True,
-    package_dir={'': 'src'},
     namespace_packages=['isotoma', 'isotoma.recipe'],
     install_requires=['zc.buildout', 'setuptools'],
       extras_require=dict(

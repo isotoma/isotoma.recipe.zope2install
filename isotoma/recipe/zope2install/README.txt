@@ -1,5 +1,5 @@
 =========================
-istoma.recipe.zope2install
+isotoma.recipe.zope2install
 =========================
 
 Overview
@@ -19,7 +19,7 @@ Zope tarball::
     ... parts = zope2
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.11.2/Zope-2.11.2-final.tgz
     ... fake-zope-eggs = False
     ... """)
@@ -45,7 +45,7 @@ Let's have a look at the different folders created::
     d  zope2
 
     >>> ls(sample_buildout, 'develop-eggs')
-    -  istoma.recipe.zope2install.egg-link
+    -  isotoma.recipe.zope2install.egg-link
 
     >>> ls(sample_buildout, 'parts', 'zope2')
     d  Extensions
@@ -85,7 +85,7 @@ Since version 3 of the recipe this is the default::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... """)
 
@@ -155,7 +155,7 @@ Now if we list all the developed eggs we have::
     -  Zope2.egg-link
     -  docutils.egg-link
     -  mechanize.egg-link
-    -  istoma.recipe.zope2install.egg-link
+    -  isotoma.recipe.zope2install.egg-link
     -  pytz.egg-link
     -  tempstorage.egg-link
     -  zLOG.egg-link
@@ -195,7 +195,7 @@ additional-fake-eggs option, for example::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... additional-fake-eggs = Foo
     ... """)
@@ -231,7 +231,7 @@ If you need to have a specific version of an egg, this can be done like this:
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... additional-fake-eggs = ZODB3=3.7
     ...                        zope.app.tree = 1.7
@@ -272,7 +272,7 @@ with the Zope tarball::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... skip-fake-eggs =
     ...     zope.annotation
@@ -310,7 +310,7 @@ Now if we list all the developed eggs we have:
     -  Zope2.egg-link
     -  docutils.egg-link
     -  mechanize.egg-link
-    -  istoma.recipe.zope2install.egg-link
+    -  isotoma.recipe.zope2install.egg-link
     -  pytz.egg-link
     -  tempstorage.egg-link
     -  zLOG.egg-link
@@ -356,7 +356,7 @@ Second, make a buildout with the given develop eggs, skipped as fake eggs::
     ...           devel/zope.annotation
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... skip-fake-eggs =
     ...     Acquisition
@@ -399,7 +399,7 @@ Now if we list all the developed eggs we have::
     -  Zope2.egg-link
     -  docutils.egg-link
     -  mechanize.egg-link
-    -  istoma.recipe.zope2install.egg-link
+    -  isotoma.recipe.zope2install.egg-link
     -  pytz.egg-link
     -  tempstorage.egg-link
     -  zLOG.egg-link
@@ -435,7 +435,7 @@ Just add it to your buildout config like this::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... smart-recompile = true
     ... """)
@@ -476,7 +476,7 @@ Let's remove the option::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... """)
 
@@ -506,7 +506,7 @@ Let's use the  ``python`` option::
     ...     http://dist.plone.org/
     ...
     ... [zope2]
-    ... recipe = istoma.recipe.zope2install
+    ... recipe = isotoma.recipe.zope2install
     ... url = http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     ... python = python2.4
     ...

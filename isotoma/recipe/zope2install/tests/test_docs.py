@@ -17,7 +17,7 @@ optionflags = (doctest.ELLIPSIS |
 
 def setUp(test):
     zc.buildout.testing.buildoutSetUp(test)
-    zc.buildout.testing.install_develop('plone.recipe.zope2install', test)
+    zc.buildout.testing.install_develop('isotoma.recipe.zope2install', test)
 
 
 def test_suite():
