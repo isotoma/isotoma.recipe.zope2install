@@ -1,0 +1,8 @@
+Change History
+==============
+
+0.0.0 (unreleased)
+------------------
+
+- Initial version (fork of plone.recipe.zope2install 3.3).
+
