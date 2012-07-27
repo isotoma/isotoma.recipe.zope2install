@@ -2,7 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 name = "isotoma.recipe.zope2install"
-version = '0.0'
+version = '0.1.dev0'
 
 
 def read(*rnames):
