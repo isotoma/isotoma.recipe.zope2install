@@ -1,0 +1,3 @@
+recursive-include isotoma *
+include *
+global-exclude *.pyc
