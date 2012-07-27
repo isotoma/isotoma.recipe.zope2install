@@ -28,6 +28,8 @@ If we run the buildout it returns::
 
     >>> print system(buildout)
     Installing zope2.
+    Zope2 is setup using : ...
+    Downloading http://www.zope.org/Products/Zope/2.11.2/Zope-2.11.2-final.tgz
     running build_ext
     creating zope.proxy
     copying zope/proxy/proxy.h -> zope.proxy
@@ -35,8 +37,6 @@ If we run the buildout it returns::
     creating build
     creating build/...
     creating build/.../AccessControl
-    ...
-    Zope2 is setup using : ...
     ...
 
 Let's have a look at the different folders created::
@@ -94,6 +94,8 @@ Now if we run the buildout again::
     >>> print system(buildout)
     Uninstalling zope2.
     Installing zope2.
+    Zope2 is setup using : ...
+    Downloading http://www.zope.org/Products/Zope/2.10.6/Zope-2.10.6-final.tgz
     running build_ext
     creating zope.proxy
     copying zope/proxy/proxy.h -> zope.proxy
@@ -101,8 +103,6 @@ Now if we run the buildout again::
     creating build
     creating build/...
     creating build/.../AccessControl
-    ...
-    Zope2 is setup using : ...
     ...
 
 The recipe then creates a fake-eggs folder in the buildout:
@@ -154,8 +154,8 @@ Now if we list all the developed eggs we have::
     -  ZODB3.egg-link
     -  Zope2.egg-link
     -  docutils.egg-link
-    -  mechanize.egg-link
     -  isotoma.recipe.zope2install.egg-link
+    -  mechanize.egg-link
     -  pytz.egg-link
     -  tempstorage.egg-link
     -  zLOG.egg-link
@@ -299,25 +299,8 @@ Now if we list all the developed eggs we have:
 
     >>> ls(sample_buildout, 'develop-eggs')
     -  Acquisition.egg-link
-    -  ClientForm.egg-link
-    -  DateTime.egg-link
-    -  ExtensionClass.egg-link
-    -  Foo.egg-link
-    -  Persistence.egg-link
-    -  RestrictedPython.egg-link
-    -  ZConfig.egg-link
-    -  ZODB3.egg-link
-    -  Zope2.egg-link
-    -  docutils.egg-link
-    -  mechanize.egg-link
+    ...
     -  isotoma.recipe.zope2install.egg-link
-    -  pytz.egg-link
-    -  tempstorage.egg-link
-    -  zLOG.egg-link
-    -  zdaemon.egg-link
-    -  zodbcode.egg-link
-    -  zope.app.annotation.egg-link
-    -  zope.app.applicationcontrol.egg-link
     ...
 
 If you want to develop one of the packages shipped
@@ -368,9 +351,7 @@ Let's run the buildout::
 
     >>> print system(buildout)
     Develop: '/sample-buildout/devel/Acquisition'
-    install_dir /sample-buildout/develop-eggs/...
     Develop: '/sample-buildout/devel/zope.annotation'
-    install_dir /sample-buildout/develop-eggs/...
     Uninstalling zope2.
     Installing zope2.
     running build_ext
@@ -381,33 +362,13 @@ Let's run the buildout::
     creating build/...
     creating build/.../AccessControl
     ...
-    Zope2 is setup using : ...
-    ...
 
 Now if we list all the developed eggs we have::
 
     >>> ls(sample_buildout, 'develop-eggs')
     -  Acquisition.egg-link
-    -  ClientForm.egg-link
-    -  DateTime.egg-link
-    -  ExtensionClass.egg-link
-    -  Foo.egg-link
-    -  Persistence.egg-link
-    -  RestrictedPython.egg-link
-    -  ZConfig.egg-link
-    -  ZODB3.egg-link
-    -  Zope2.egg-link
-    -  docutils.egg-link
-    -  mechanize.egg-link
+    ...
     -  isotoma.recipe.zope2install.egg-link
-    -  pytz.egg-link
-    -  tempstorage.egg-link
-    -  zLOG.egg-link
-    -  zdaemon.egg-link
-    -  zodbcode.egg-link
-    -  zope.annotation.egg-link
-    -  zope.app.annotation.egg-link
-    -  zope.app.applicationcontrol.egg-link
     ...
 
 Let's check the develop-egg links::
@@ -453,8 +414,6 @@ Now if we run the buildout again::
     creating build/...
     creating build/.../AccessControl
     ...
-    Zope2 is setup using : ...
-    ...
 
 And a second time, even if we remove .installed.cfg, it is not recompiled::
 
@@ -492,8 +451,6 @@ Now if we run the buildout again::
     creating build
     creating build/...
     creating build/.../AccessControl
-    ...
-    Zope2 is setup using : ...
     ...
 
 Let's use the  ``python`` option::
